@@ -36,23 +36,39 @@
     font-weight: 600;
 }
 
+.navbar-item:hover .navbar-second-selection {
+    display: block;
+}
+
 .navbar-list-center {
     position: relative;
     flex: 1;
     justify-content: center;
-
 }
 
 .navbar-list-center .navbar-link {
     padding: 0 37px;
 }
 
-.navbar-second-list {
+.navbar-second-selection {
+    display: none;
     position: absolute;
-    list-style: none;
-    padding: 28px 0 30px;
     top: 80px;
     background-color: var(--white-color);
+}
+
+.navbar-second-selection::before {
+    content: "";
+    position: absolute;
+    width: 257px;
+    height: 52px;
+    top: -35px;
+    display: block;
+}
+
+.navbar-second-list {
+    list-style: none;
+    padding: 28px 0 30px;
 }
 
 .navbar-second-item-link {
