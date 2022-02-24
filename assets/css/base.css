@@ -9,15 +9,17 @@
     box-sizing: inherit;
 }
 
-body {
-    background-color: #00000027;
-}
-
 html {
     font-size: 62.5% ;
     line-height: 1.6rem;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+}
+
+body {
+    background-color: #00000027;
+    font-size: 1.4rem;
+
 }
 
 

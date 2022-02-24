@@ -1,8 +1,11 @@
 .header {
+    position: relative;
     background-color: #FFFFFF;
     display: flex;
     height: 80px;
     padding: 0 20px;
+    justify-content: space-between;
+
 }
 
 .header-logo {
@@ -17,7 +20,14 @@
 
 .navbar {
     display: flex;
-    flex: 1;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    left: 0;
+}
+
+.navbar-right {
+    display: flex;
 }
 
 .navbar-list {
@@ -36,6 +46,10 @@
     font-weight: 600;
 }
 
+.navbar-item {
+    line-height: 80px;
+}
+
 .navbar-item:hover .navbar-second-selection {
     display: block;
 }
@@ -52,6 +66,8 @@
 
 .navbar-second-selection {
     display: none;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 5%);
+    min-width: 257px;
     position: absolute;
     top: 80px;
     background-color: var(--white-color);
@@ -61,14 +77,83 @@
     content: "";
     position: absolute;
     width: 257px;
-    height: 52px;
-    top: -35px;
+    height: 16px;
+    top: -10px;
     display: block;
+}
+
+.navbar-item:hover .navbar-second-have-multi-column {
+    display: block;
+}
+
+.navbar-second-have-multi-column {
+    display: none;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 5%);
+    min-width: 257px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    background-color: var(--white-color);
+}
+
+.navbar-second-have-multi-column::before {
+    content: "";
+    height: 8px;
+    width: 100%;
+    position: absolute;
+    top: -8px;
+    right: 0;
+}
+
+.navbar-second-have-multi-column-list {
+    padding: 46px 0 44px 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar-second-heading-text {
+    line-height: 25px;
+    font-size: 1.5rem;
+}
+
+.navbar-third-have-multi-column-list {
+    padding: 0;
+    list-style: none;
+}
+
+.navbar-third-have-multi-column-item {
+    line-height: 40px;
+}
+
+.navbar-third-have-multi-column-link {
+    color: var(--black-color);
+    text-decoration: none;
 }
 
 .navbar-second-list {
     list-style: none;
     padding: 28px 0 30px;
+}
+
+.navbar-second-item {
+    position: relative;
+    line-height: 25px;
+}
+
+.navbar-second-item-have-icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-second-item-have-icon:hover .navbar-third-selection {
+    display: block;
+}
+
+.navbar-second-item-icon {
+    padding-right: 25px;
 }
 
 .navbar-second-item-link {
@@ -78,8 +163,34 @@
     font-size: 1.4rem;
     line-height: 24px;
     display: inline-block;
-    width: 257px;
     font-weight: 500;
+}
+
+.navbar-third-selection {
+    position: absolute;
+    width: 257px;
+    background-color: var(--white-color);
+    z-index: 99;
+    top: 0;
+    right: -257px;
+    padding: 28px 0 30px 0;
+    box-shadow: 0 3px 13px 0 rgb(0 0 0 / 5%);
+    display: none;
+}
+
+.navbar-third-list {
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-third-item {
+    padding: 4px 25px 6px 32px;
+    line-height: 2.5rem;
+}
+
+.navbar-third-item-link {
+    text-decoration: none;
+    color: var(--black-color);
 }
 
 .navbar-list-right .navbar-link {
