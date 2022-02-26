@@ -248,7 +248,7 @@
     padding: 0 10px;
 }
 
-/* modal */
+/* modal search */
 .modal-search {
     position: fixed;
     top: 0;
@@ -293,5 +293,144 @@
 }
 
 .modal-search__submit:hover {
-    background-color: #039a9f4a;
+    background-color: var(--dark-blue);
 }
+
+/* modal menu */
+.modal-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    min-height: 1080px;
+}
+
+.modal-menu__body {
+    position: relative;
+    background-color: var(--white-color);
+    min-height: 1080px;
+    height: 100%;
+    width: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 99;
+    box-shadow: 5px 8px 13.92px 2.08px rgb(0 0 0 / 10%);
+    padding: 100px 50px 40px 50px;
+    display: none;
+}
+
+.js-modal-menu__body {
+    display: block;
+}
+
+.modal-menu-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.modal-menu-close__icon {
+    font-size: 3rem;
+    padding: 20px;
+}
+
+.modal-menu-close__icon:hover {
+    cursor: pointer;
+    color: #3fd0d4;
+}
+
+.modal-menu-image-1, 
+.modal-menu-image-2 {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.modal-menu-image-1__img {
+    width: 203px;
+}
+
+.modal-menu-image-3 {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.modal-menu-text-1 {
+    text-align: center;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    margin: 10px 0;
+    color: #505050;
+}
+
+.modal-menu-search {
+    margin: 50px 0 70px 0;
+}
+
+.modal-menu-search__heading {
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.modal-menu-search__form {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-menu-search__input:focus {
+    outline: none;
+}
+
+.modal-menu-search__input {
+    padding: 9px 0 11px 21px;
+    border-style: none;
+    background-color: #f8f8f8;
+}
+
+.modal-menu-search__submit {
+    border-style: none;
+    background-color: #3fd0d4;
+    color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.modal-menu-search__submit:hover {
+    background-color: var(--dark-blue);
+}
+
+.modal-menu-folow__heading {
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
+.modal-menu-folow__body {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-menu-folow__link {
+    background-color: var(--blue-color);
+    color: var(--white-color);
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.modal-menu-folow__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 2.4rem;
+}
+

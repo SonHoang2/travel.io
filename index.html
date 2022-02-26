@@ -389,7 +389,7 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </a>
                 </li>
-                <li class="navbar-item">
+                <li class="navbar-item navbar-item-menu">
                     <a href="#" class="navbar-link">
                         <i class="fa-solid fa-bars"></i>
                     </a>
@@ -414,7 +414,58 @@
         </form>
     </div>
 
-    <script>
+    <div class="modal-menu">
+        <div class="modal-menu__body js-modal-menu__body">
+            <div class="modal-menu-close">
+                <i class="modal-menu-close__icon fa-solid fa-xmark"></i>
+            </div>
+            <div class="modal-menu-image-1">
+                <img class="modal-menu-image-1__img" src="assets/img/logo.png" alt="setsail logo"> 
+            </div>
+            <div class="modal-menu-image-2">
+                <img class="modal-menu-image-2__img" src="assets/img/sidearea-img-2.png" alt="text"> 
+            </div>
+            <div class="modal-menu-image-3">
+                <img class="modal-menu-image-3__img" src="assets/img/sidearea-img.jpg" alt="map"> 
+            </div>
+            <p class="modal-menu-text-1">
+                Lorem ipsum dolor sit amet, consectetuer adipis cing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis theme natoque
+            </p>
+            <div class="modal-menu-search">
+                <h3 class="modal-menu-search__heading">
+                    Find Your Destination
+                </h3>
+                <form class="modal-menu-search__form" action="">
+                    <input class="modal-menu-search__input" type="text" placeholder="Search...">
+                    <button class="modal-menu-search__submit" type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="modal-menu-folow">
+                <h3 class="modal-menu-folow__heading">
+                    Follow Me
+                </h3>
+                <div class="modal-menu-folow__body">
+                    <a href="" class="modal-menu-folow__link">
+                        <i class="modal-menu-folow__icon fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="" class="modal-menu-folow__link">
+                        <i class="modal-menu-folow__icon fa-brands fa-pinterest-p"></i>
+                    </a>
+                    <a href="" class="modal-menu-folow__link">
+                        <i class="modal-menu-folow__icon fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="modal-menu-folow__link">
+                        <i class="modal-menu-folow__icon fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script> // modal search
         const iconSearch = document.querySelector(".navbar-item-search") 
         const modalSearch = document.querySelector(".modal-search")
         const modalSearchBody = document.querySelector(".modal-search__body")
@@ -427,6 +478,27 @@
             modalSearch.classList.remove('js-modal-search')
         })
         modalSearchBody.addEventListener('click', function(event){
+            event.stopPropagation()
+        })
+    </script>
+
+    <script> // modal menu
+        const modalMenu = document.querySelector(".modal-menu")
+        const modalMenuBody = document.querySelector(".modal-menu__body")
+        const modalMenuClose = document.querySelector(".modal-menu-close")
+        const navbarMenu = document.querySelector(".navbar-item-menu")
+        // mở modal menu
+        navbarMenu.addEventListener("click", function(){
+            modalMenuBody.classList.add("js-modal-menu__body")
+        })
+        // đóng modal menu
+        modalMenuClose.addEventListener("click", function(){
+            modalMenuBody.classList.remove("js-modal-menu__body")
+        })
+        modalMenu.addEventListener("click", function(){
+            modalMenuBody.classList.remove("js-modal-menu__body")
+        })
+        modalMenuBody.addEventListener("click", function(event){
             event.stopPropagation()
         })
     </script>
