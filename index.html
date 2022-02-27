@@ -400,9 +400,18 @@
     </header>
 
     <div class="container">
-
+        <div class="carousel-slide">
+            <img class="carousel-slide__img">
+            <div class="carousel-slide__btn">
+                <button class="prev-btn">
+                    <i class="prev-btn__icon fa-solid fa-angle-left"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="next-btn__icon fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+        </div>
     </div>
-
     <div class="footer">
 
     </div>
@@ -415,7 +424,7 @@
     </div>
 
     <div class="modal-menu">
-        <div class="modal-menu__body js-modal-menu__body">
+        <div class="modal-menu__body">
             <div class="modal-menu-close">
                 <i class="modal-menu-close__icon fa-solid fa-xmark"></i>
             </div>
@@ -464,43 +473,9 @@
         </div>
     </div>
     
-
-    <script> // modal search
-        const iconSearch = document.querySelector(".navbar-item-search") 
-        const modalSearch = document.querySelector(".modal-search")
-        const modalSearchBody = document.querySelector(".modal-search__body")
-        // mở modal search
-        iconSearch.addEventListener('click', function() {
-            modalSearch.classList.add('js-modal-search')
-        })
-        // đóng modal search 
-        modalSearch.addEventListener('click', function (){
-            modalSearch.classList.remove('js-modal-search')
-        })
-        modalSearchBody.addEventListener('click', function(event){
-            event.stopPropagation()
-        })
-    </script>
-
-    <script> // modal menu
-        const modalMenu = document.querySelector(".modal-menu")
-        const modalMenuBody = document.querySelector(".modal-menu__body")
-        const modalMenuClose = document.querySelector(".modal-menu-close")
-        const navbarMenu = document.querySelector(".navbar-item-menu")
-        // mở modal menu
-        navbarMenu.addEventListener("click", function(){
-            modalMenuBody.classList.add("js-modal-menu__body")
-        })
-        // đóng modal menu
-        modalMenuClose.addEventListener("click", function(){
-            modalMenuBody.classList.remove("js-modal-menu__body")
-        })
-        modalMenu.addEventListener("click", function(){
-            modalMenuBody.classList.remove("js-modal-menu__body")
-        })
-        modalMenuBody.addEventListener("click", function(event){
-            event.stopPropagation()
-        })
-    </script>
+    
+    <script src="assets/js/carousel-slide.js"></script>
+    <script src="assets/js/modal menu.js"></script>
+    <script src="assets/js/modal search.js"></script>
 </body>
 </html>
