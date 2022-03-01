@@ -63,7 +63,7 @@ nextBtn.addEventListener('click', function() {
 })
 
 slideit()
-window.onload = setInterval(slideit, 3000)
+window.onload = setInterval(slideit, 5000)
 
 
 

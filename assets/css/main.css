@@ -47,6 +47,7 @@
     right: 0;
     width: 280px;
     display: none;
+    animation: appear-gradually-downwards 0.5s ease;
 }
 
 .empty-cart__text {
@@ -105,6 +106,7 @@
     position: absolute;
     top: 80px;
     background-color: var(--white-color);
+    animation: appear-gradually-downwards 0.5s ease;
 }
 
 .navbar-second-selection::before {
@@ -129,6 +131,7 @@
     right: 0;
     left: 0;
     background-color: var(--white-color);
+    animation: appear-gradually-downwards 0.5s ease;
 }
 
 .navbar-second-have-multi-column::before {
@@ -261,6 +264,7 @@
     justify-content: center;
     z-index: 99;
     display: none;
+    animation: fade-in 0.5s ease;
 }
 
 .js-modal-search {
@@ -319,6 +323,7 @@
     z-index: 99;
     box-shadow: 5px 8px 13.92px 2.08px rgb(0 0 0 / 10%);
     padding: 100px 50px 40px 50px;
+    animation: appear-gradually-to-right 0.2s ease-out;
 }
 
 .js-modal-menu {
@@ -488,9 +493,6 @@
     font-size: 2rem;
     line-height: 2.4rem;
 }
-
-
-
 
 .carousel-slide__btn {
     position: absolute;
