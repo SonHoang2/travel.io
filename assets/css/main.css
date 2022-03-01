@@ -455,6 +455,12 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    animation: carousel-slide 2s ease;
+    display: none;
+}
+
+.carousel-slide-text--appear {
+    display: flex;
 }
 
 .carousel-slide-text__h5,

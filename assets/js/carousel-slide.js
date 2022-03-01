@@ -1,7 +1,5 @@
 const carouselSlideImg = document.querySelector('.carousel-slide__img')
-const carouselSlideTextH5 = document.querySelector('.carousel-slide-text__h5')
-const carouselSlideTextH1 = document.querySelector('.carousel-slide-text__h1')
-const carouselSlideTextp = document.querySelector('.carousel-slide-text__p')
+const carouselSlideText = document.querySelectorAll('.carousel-slide-text')
 
 let images = [
     'assets/img/img change/skiing-slider-img-1.jpg',
@@ -15,48 +13,57 @@ const nextBtn = document.querySelector('.next-btn')
 let step = 0;
 function slideit(){
     carouselSlideImg.src = images[step]
-    if (step < images.length - 1 ) {
-        carouselSlideTextH5.innerText = 'From alps'
-        carouselSlideTextH1.innerText = 'Snow Adventure'
-        step++
+    if (images[step] != undefined) {
+        if (step < images.length - 1 ) {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step + 1].classList.remove('carousel-slide-text--appear')
+            step++
+        }
+        else {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step - 1].classList.remove('carousel-slide-text--appear')
+            step = 0
+        }
     }
-    else {
-        carouselSlideTextH5.innerText = 'Enjoy Your'
-        carouselSlideTextH1.innerText = 'Winter Vacations'
-        step = 0
-    }
+    else step = 0
 }
 
 preBtn.addEventListener('click', function() {
-    if (step > images.length - 1 ) {
-        step = 0
-        carouselSlideImg.src = images[step]
-        carouselSlideTextH5.innerText = 'Enjoy Your'
-        carouselSlideTextH1.innerText = 'Winter Vacations'
+    carouselSlideImg.src = images[step]
+    if (images[step] != undefined) {
+        if (step < images.length - 1 ) {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step + 1].classList.remove('carousel-slide-text--appear')
+            step++
+        }
+        else {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step - 1].classList.remove('carousel-slide-text--appear')
+            step = 0
+        }
     }
-    else {
-        carouselSlideImg.src = images[step++]
-        carouselSlideTextH5.innerText = 'From alps'
-        carouselSlideTextH1.innerText = 'Snow Adventure'
-    }
+    else step = 0
 })
 
 nextBtn.addEventListener('click', function() {
-    if (step > images.length - 1 ) {
-        step = 0
-        carouselSlideImg.src = images[step]
-        carouselSlideTextH5.innerText = 'Enjoy Your'
-        carouselSlideTextH1.innerText = 'Winter Vacations'
+    carouselSlideImg.src = images[step]
+    if (images[step] != undefined) {
+        if (step < images.length - 1 ) {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step + 1].classList.remove('carousel-slide-text--appear')
+            step++
+        }
+        else {
+            carouselSlideText[step].classList.add('carousel-slide-text--appear')
+            carouselSlideText[step - 1].classList.remove('carousel-slide-text--appear')
+            step = 0
+        }
     }
-    else {
-        carouselSlideImg.src = images[step++]
-        carouselSlideTextH5.innerText = 'From alps'
-        carouselSlideTextH1.innerText = 'Snow Adventure'
-    }
+    else step = 0
 })
 
 slideit()
-window.onload = setInterval(slideit, 5000)
+window.onload = setInterval(slideit, 3000)
 
 
 
