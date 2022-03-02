@@ -5,6 +5,7 @@
     --white-color: #fff;
     --blue-color: #3fd0d4;
     --dark-blue: #2d9194;
+    --gray-color: #505050;
 }
 
 * {
@@ -19,7 +20,6 @@ html {
 }
 
 body {
-    background-color: #00000027;
     font-size: 1.4rem;
 
 }
