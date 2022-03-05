@@ -47,7 +47,7 @@
     right: 0;
     width: 280px;
     display: none;
-    animation: appear-gradually-downwards 0.5s ease;
+    animation: fade-in 0.5s ease;
 }
 
 .empty-cart__text {
@@ -106,7 +106,7 @@
     position: absolute;
     top: 80px;
     background-color: var(--white-color);
-    animation: appear-gradually-downwards 0.5s ease;
+    animation: fade-in 0.5s ease;
 }
 
 .navbar-second-selection::before {
@@ -131,7 +131,7 @@
     right: 0;
     left: 0;
     background-color: var(--white-color);
-    animation: appear-gradually-downwards 0.5s ease;
+    animation: fade-in 0.5s ease;
 }
 
 .navbar-second-have-multi-column::before {
@@ -226,6 +226,7 @@
     padding: 28px 0 30px 0;
     box-shadow: 0 3px 13px 0 rgb(0 0 0 / 5%);
     display: none;
+    animation: fade-in 0.5s ease;
 }
 
 .navbar-third-list {
@@ -533,6 +534,7 @@
 .Owl-Carousel {
     display: flex;
     margin-left: 20px;
+    margin-bottom: 100px;
 }
 
 .Owl-Carousel-item {
@@ -595,43 +597,18 @@
     justify-content: space-between;
 }
 /* video container */
-.video-container {
-    width: 1200px;
-    margin: auto;
-}
-
-.video-container-heading {
-    text-align: center;
-    padding: 165px 0 50px 0;
-}
-
-.video-container-heading__h5 {
-    font-size: 3.3rem;
-    line-height: 6.6rem;
-    font-family: 'Satisfy', cursive;
-    color: var(--blue-color);
-    margin: 0;
-}
-
-.video-container-heading__h2 {
-    font-size: 6rem;
-    line-height: 6rem;
-    margin: 0;
-}
-
-.video-container-content {
+.video-content {
     text-align: center;
     width: 1050px;
     margin: auto;
-    padding-bottom: 130px;
 }
 
-.video-container-content-youtube__link {
+.video-content-youtube__link {
     display: inline-block;
     position: relative;
 }
 
-.video-container-content-youtube-button {
+.video-content-youtube-button {
     position: absolute;
     top: 50%;
     text-align: center;
@@ -639,11 +616,11 @@
     transform: translateY(-50%);
 }
 
-.video-container-content-youtube__link:hover .video-container-content-youtube-button__img{
+.video-content-youtube__link:hover .video-content-youtube-button__img{
     transform: scale(110%);
 }
 
-.video-container-content__text {
+.video-content__text {
     margin: 35px auto 35px auto;
     text-align: center;
     font-size: 1.6rem;
@@ -652,11 +629,165 @@
     width: 1000px;
 }
 
-.video-container-content__link {
+.video-content__link {
     color: var(--white-color);
     background-color: var(--blue-color);
     padding: 18px 66px;
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
+}
+
+/* review-container */
+#review-container {
+    background-image: url("../img/img change/skiing-slider-img-2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+.review-carousel {
+    display: flex;
+}
+
+.review-carousel__element {
+    background-color: var(--white-color);
+    display: flex;
+    padding: 45px 30px;
+    width: 33%;
+    border-radius: 5px;
+}
+
+.review-carousel__element:nth-child(2) {
+    margin: 0 40px;
+}
+
+.review-img-container {
+    padding-right: 20px;
+}
+
+.review__link {
+    color: var(--black-color);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 20px;
+    display: block;
+}
+
+.review-star {
+    color: var(--blue-color);
+}
+
+.review-text {
+    color: var(--gray-color);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+}
+
+/* icon-container */
+.icons-container {
+    display: flex;
+}
+
+.icon-container {
+    text-align: center;
+    padding: 0 45px;
+}
+
+.icon-container__text {
+    line-height: 2rem;
+    color: var(--gray-color);
+}
+
+.Owl-Carousel-2 {
+    display: flex;
+    overflow: hidden;
+}
+
+.Owl-Carousel-2-img-container {
+    width: 25%;
+    position: relative;
+}
+
+.Owl-Carousel-2-img {
+    width: 100%;
+    display: block;
+}
+
+.Owl-Carousel-2-content {
+    background-color: var(--blue-color);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    display: none;
+    animation: fade-in 0.7s ease;
+}
+
+.Owl-Carousel-2-img-container:hover .Owl-Carousel-2-content {
+    display: block;
+    animation: appear-gradually-upwards 0.7s ease;
+}
+
+.Owl-Carousel-2-title,
+.Owl-Carousel-2-text,
+.Owl-Carousel-2-icon-container {
+    margin: 0;
+    padding: 20px 50px 0 50px;
+    color: var(--white-color);
+    text-align: center;
+}
+
+.Owl-Carousel-2-icon-container {
+    padding-bottom: 20px;
+}
+
+.Owl-Carousel-2-icon__link {
+    color: var(--white-color);
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.Owl-Carousel-2-icon {
+    margin-right: 20px;
+}
+
+.time-containter {
+    background-color: #3abdc1;
+    color: var(--white-color);
+    display: flex;
+    padding: 75px 0;
+    justify-content: space-around;
+}
+
+.time-item {
+    padding: 0 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.time-number {
+    font-size: 6rem;
+    line-height: 6rem;
+    margin: 0;
+}
+
+.time-text {
+    margin: 20px 0 0 0;
+    font-size: 2rem;
+}
+
+/* resort-container */
+.resort-container {
+    display: flex;
+}
+
+.resort-img-container {
+    display: block;
+}
+
+.resort-img {
+    width: 100%;
+    border-radius: 50%;
 }
