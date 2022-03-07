@@ -76,6 +76,10 @@ body {
     color: var(--white-color) !important;
 }
 
+.grid-col-4 {
+    width: 25%;
+}
+
 /* content-section */
 .content-section {
     width: 1200px;
@@ -109,3 +113,4 @@ body {
     margin: 20px auto;
     color: var(--gray-color);
 }
+
