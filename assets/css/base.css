@@ -47,7 +47,7 @@ body {
 
 @keyframes fade-in {
     from {
-        opacity: 0;
+        opacity: 0.5;
     }
     to {
         opacity: 1;
@@ -76,8 +76,14 @@ body {
     color: var(--white-color) !important;
 }
 
+.page-reload {
+    display: block;
+}
+
 .grid-col-4 {
     width: 25%;
+    display: inline-block;
+    padding: 0 20px;
 }
 
 /* content-section */
