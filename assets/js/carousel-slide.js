@@ -1,10 +1,5 @@
 const carouselSlideImg = document.querySelector('.carousel-slide__img');
 const carouselSlideText = document.querySelectorAll('.carousel-slide-text');
-
-let images = [
-    'assets/img/img change/skiing-slider-img-1.jpg',
-    'assets/img/img change/skiing-slider-img-2.jpg'
-];
 // button
 const preBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');

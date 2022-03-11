@@ -640,7 +640,7 @@
 
 /* review-container */
 #review-container {
-    background-image: url("../img/img change/skiing-slider-img-2.jpg");
+    background-image: url("../img/winter-img-8.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     padding: 120px 0;
@@ -948,5 +948,5 @@
 }
 
 .footer-img {
-    width: 20%;
+    width: 19%;
 }
