@@ -259,7 +259,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background-color: #3fd0d494;
+    background-color: #00f8ffd1;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -291,7 +291,7 @@
     height: 80px;
     border-style: none;
     padding: 0 72px;
-    background-color: #00f7ff94;
+    background-color: #2dc5cb;
     color: var(--white-color);
     text-transform: uppercase;
     cursor: pointer;
@@ -616,6 +616,10 @@
     transform: translateY(-50%);
 }
 
+.video-content-youtube-button__img {
+    transition: transform 0.5s;
+}
+
 .video-content-youtube__link:hover .video-content-youtube-button__img{
     transform: scale(110%);
 }
@@ -636,14 +640,6 @@
     text-decoration: none;
     text-transform: uppercase;
     display: inline-block;
-}
-
-/* review-container */
-#review-container {
-    background-image: url("../img/winter-img-8.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 120px 0;
 }
 
 .review-carousel {
@@ -949,4 +945,170 @@
 
 .footer-img {
     width: 19%;
+}
+
+/* tour-container */
+.tours-container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    top: -47px;
+    z-index: 99;
+}
+
+.tours-container-center {
+    box-shadow: 0px 1px 10px #000000b0;
+    display: flex;
+}
+
+.tour-input-container {
+    border-right: 1px solid #dfdfdf;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 270px;
+}
+
+.tour-icon {
+    padding: 0 0 0 25px;
+    color: var(--gray-color);
+    font-size: 1.6rem;
+    position: absolute;
+}
+
+.tour-input {
+    border: none;
+    font-size: 1.6rem;
+    height: 100%;
+    width: 100%;
+    padding-left: 55px;
+    overflow: auto;
+}
+
+.tour-input:focus {
+    outline: none;
+}
+/* img-wrapper */
+.img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.td-item-destination,
+.td-item-tour{
+    position: relative;
+    text-shadow: 2px 0px #000000;
+    margin-bottom: 20px;
+}
+
+.td-item-link {
+    display: block;
+    text-decoration: none;
+    color: var(--white-color);
+    position: relative;
+}
+
+.td-item-destination-holder__img {
+    border-radius: 50%;
+}
+
+.td-item-destination-holder__img, 
+.td-item-tour {
+    overflow: hidden;
+}
+
+.td-item-destination__img {
+    width: 100%;
+    border-radius: 50%;
+    display: block;
+}
+
+.td-item-destination__text {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 4.8rem;
+    font-family: Satisfy,cursive;
+    margin: 0;
+    z-index: 99;
+}
+
+.td-item-tour__img {
+    width: 100%;
+    display: block;
+}
+
+.td-item-destination__img, 
+.td-item-tour__img {
+    transition: transform 0.5s;
+}
+
+.td-item-destination:hover .td-item-destination__img,
+.td-item-tour:hover .td-item-tour__img {
+    transform: scale(105%);
+}
+
+.td-item-destination::before,
+.td-item-tour::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.100);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+}
+
+.td-item-destination::before {
+    border-radius: 50%;
+}
+
+.td-item-tour-content {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+}
+
+.td-item-title__text {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.td-item-content {
+    display: flex;
+    padding-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.td-item-icon {
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.td-item-price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.paris-logo {
+    text-align: center;
+    margin-top: -100px;
+    padding-bottom: 100px;
+}
+
+.testimonial-item {
+    text-align: center;
+}
+
+.testimonial-text {
+    font-size: 2rem;
+    width: 800px;
+    margin: 10px auto;
+    line-height: 3rem;
+    color: var(--gray-color);
 }
